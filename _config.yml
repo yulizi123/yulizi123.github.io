@@ -1,0 +1,249 @@
+
+markdown: kramdown
+
+highlighter: rouge
+url: https://morvanzhou.github.io
+exclude: ['README.md']
+
+
+# collection and their defaults
+
+collections:
+  front-pages:
+    output: true
+  modules-intro:
+    output: true
+  loop-description:
+    output: false
+  tutorials:
+    output: true
+    permalink: /:collection/:path/
+  table-contents:
+    output: true
+    permalink: /tutorials/:path/
+
+
+defaults:
+  - scope:
+      path: "_front-pages"
+    values:
+      layout: front-page
+      enable_ads: true
+
+  - scope:
+      path: "_modules-intro"
+    values:
+      layout: front-page
+
+  - scope:
+      path: "_table-contents"
+    values:
+      layout: table-of-contents
+
+  - scope:
+      path: "_tutorials"
+    values:
+      layout: tutorial-post
+      editor: 莫烦
+      author: 莫烦
+      author-link: "#"
+      enable_ads: true
+      published: true  #TOD: change back to true
+
+  # module descriptions
+  - scope:
+      path: "_loop-description/python-basic"
+    values:
+      module: python-basic
+  - scope:
+      path: "_loop-description/home"
+    values:
+      module: home
+  - scope:
+      path: "_loop-description/data-manipulation"
+    values:
+      module: data-manipulation
+  - scope:
+      path: "_loop-description/machine-learning"
+    values:
+      module: machine-learning
+  - scope:
+      path: "_loop-description/others"
+    values:
+      module: others
+
+
+
+  # tutorial default
+  - scope:
+      path: "_tutorials/machine-learning/ML-intro"
+    values:
+      series: 有趣的机器学习
+      tut-permalink: /tutorials/machine-learning/ML-intro/
+      category: ML-intro
+      keywords: 机器学习, 简介, 动画
+      thumbnail: /static/img/course_cover/ML_intro.png
+
+  - scope:
+      path: "_tutorials/machine-learning/reinforcement-learning"
+    values:
+      series: 强化学习 Reinforcement Learning
+      tut-permalink: /tutorials/machine-learning/reinforcement-learning/
+      category: reinforcement-learning
+      keywords: reinforcement learning, 强化学习, tensorflow
+      thumbnail: /static/img/course_cover/rl.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/evolutionary-algorithm"
+    values:
+      series: 进化算法 Evolutionary Algorithm
+      tut-permalink: /tutorials/machine-learning/evolutionary-algorithm/
+      category: evolutionary-algorithm
+      keywords: evolutionary algorithm, 进化算法, 遗传算法, genetic algorithm, neuro evalution
+      thumbnail: /static/img/course_cover/EA.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/keras"
+    values:
+      series: Keras
+      tut-permalink: /tutorials/machine-learning/keras/
+      category: keras
+      keywords: keras, 神经网络, tensorflow, theano
+      thumbnail: /static/img/course_cover/keras.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/torch"
+    values:
+      series: PyTorch
+      tut-permalink: /tutorials/machine-learning/torch/
+      category: torch
+      keywords: Torch, pytorch, 神经网络
+      thumbnail: /static/img/course_cover/torch.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/sklearn"
+    values:
+      series: Sklearn
+      tut-permalink: /tutorials/machine-learning/sklearn/
+      category: sklearn
+      keywords: sklearn, scikit-learn, 机器学习
+      thumbnail: /sstatic/img/course_cover/sklearn.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/tensorflow"
+    values:
+      series: Tensorflow
+      tut-permalink: /tutorials/machine-learning/tensorflow/
+      category: tensorflow
+      keywords: tensorflow, tensorboard, 机器学习, 神经网络
+      thumbnail: /static/img/course_cover/tf.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/theano"
+    values:
+      series: Theano
+      tut-permalink: /tutorials/machine-learning/theano/
+      category: theano
+      keywords: theano, 机器学习, 神经网络
+      thumbnail: /static/img/course_cover/theano.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/ML-practice"
+    values:
+      series: 机器学习实战
+      tut-permalink: /tutorials/machine-learning/ML-practice/
+      category: ML-practice
+      keywords: 从头开始, 实战, 机器学习, 神经网络
+      thumbnail: /static/img/course_cover/ML-practice.jpg
+
+  - scope:
+      path: "_tutorials/machine-learning/computer-vision"
+    values:
+      series: 计算机视觉
+      tut-permalink: /tutorials/machine-learning/computer-vision/
+      category: computer-vision
+      keywords: tensorflow, 机器学习, 神经网络, 计算机视觉，Computer-vision
+      thumbnail: /static/img/course_cover/computer-vision.jpg
+
+  - scope:
+      path: "_tutorials/data-manipulation/np-pd"
+    values:
+      series: Numpy & Pandas
+      tut-permalink: /tutorials/data-manipulation/np-pd/
+      category: np-pd
+      keywords: numpy, pandas, 数据, 处理
+      thumbnail: /static/img/course_cover/np_pd.jpg
+
+  - scope:
+      path: "_tutorials/data-manipulation/plt"
+    values:
+      series: Matplotlib
+      tut-permalink: /tutorials/data-manipulation/plt/
+      category: plt
+      keywords: matplotlib, plt, 数据可视化
+      thumbnail: /static/img/course_cover/plt.jpg
+
+  - scope:
+      path: "_tutorials/data-manipulation/scraping"
+    values:
+      series: 网页爬虫
+      tut-permalink: /tutorials/data-manipulation/scraping/
+      category: scraping
+      keywords: scraping, 爬虫, beautifulsoup
+      thumbnail: /static/img/course_cover/scraping.jpg
+
+  - scope:
+      path: "_tutorials/python-basic/multiprocessing"
+    values:
+      series: 多进程 Multiprocessing
+      tut-permalink: /tutorials/python-basic/multiprocessing/
+      category: multiprocessing
+      keywords: python, 基础, 多进程, multiprocessing
+      thumbnail: /static/img/course_cover/multiprocessing.jpg
+
+  - scope:
+      path: "_tutorials/python-basic/threading"
+    values:
+      series: 多线程 Threading
+      tut-permalink: /tutorials/python-basic/threading/
+      category: threading
+      keywords: python, 基础, 多线程, threading
+      thumbnail: /static/img/course_cover/threading.jpg
+
+
+  - scope:
+      path: "_tutorials/python-basic/tkinter"
+    values:
+      series: 窗口 Tkinter
+      tut-permalink: /tutorials/python-basic/tkinter/
+      category: tkinter
+      keywords: python, 基础, GUI, 窗口, tkinter, tk
+      thumbnail: /static/img/course_cover/tkinter.jpg
+
+  - scope:
+      path: "_tutorials/python-basic/basic"
+    values:
+      series: Python 基础
+      tut-permalink: /tutorials/python-basic/basic/
+      category: basic
+      keywords: python, 基础
+      thumbnail: /static/img/course_cover/python_basic.jpg
+
+  - scope:
+      path: "_tutorials/others/linux-basic"
+    values:
+      series: Linux 简易教学
+      tut-permalink: /tutorials/others/linux-basic/
+      category: linux-basic
+      keywords: linux, 基础
+      thumbnail: /static/img/course_cover/ML_intro.png
+
+  - scope:
+      path: "_tutorials/others/git"
+    values:
+      series: Git 版本管理
+      tut-permalink: /tutorials/others/git/
+      category: git
+      keywords: 其他, git, VCS
+      thumbnail: /static/img/course_cover/git.jpg
+      published: true
